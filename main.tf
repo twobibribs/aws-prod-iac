@@ -1,8 +1,13 @@
-provider "aws" {
-    region = "us-east-1"
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+    }
+  }
 }
 
-module "s3" {
-    #bucket name should be unique
-    bucket_name = "testbucket"       
+provider "aws" {}
+
+resource "aws_s3_bucket" "s3" {
+  bucket = "terraform-experiments"
 }
