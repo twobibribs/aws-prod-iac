@@ -1,4 +1,4 @@
-# Query the current AWS region so we know its S3 endpoint
+# Query the current AWS region so we know its endpoint
 data "aws_region" "current" {}
 
 # Create the S3 bucket in which the static content for the site should be hosted
