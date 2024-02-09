@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "this" {
   # http://www.holovaty.com/writing/cors-ie-cloudfront/
   cors_rule {
     allowed_headers = ["*"]
-    allowed_methods = ["GET","POST"]
+    allowed_methods = ["GET"]
     allowed_origins = ["*"]
     max_age_seconds = 3000
   }
